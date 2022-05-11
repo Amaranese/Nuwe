@@ -1,0 +1,13 @@
+<div class="main">
+  <h2>Listas de Regalos</h2>
+  <div class="scrollmenu d-lg-flex d-inline">
+    <div *ngFor="let present of presents" (click)="onViewDetails.emit($event)" class="card mb-2 me-2">
+        <div class="card-body">
+          <h4 class="card-title">{{present.title}} 🎉</h4>
+          <p class="card-text text-wrap">{{present.content}} 	
+            🎉</p>
+          <a *ngFor="let cat of present.categories" class="btn btn-primary rounded-pill m-1 py-0 category text-wrap">{{cat}}</a>
+        </div>
+    </div>
+  </div>
+</div>
