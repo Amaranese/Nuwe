@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit colors="true" bootstrap="tests/autoload.php">
+    <testsuites>
+        <testsuite name="Ivory Google Map Test Suite">
+            <directory suffix="Test.php">./tests/</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <server name="API_KEY" value="AIzaSyAYhuwcFCmc7W9sdDweF_ewbWPTypqDrqs" />
+        <server name="API_SECRET" value="JADEyaa-FWNCdlgAb9qS7bMIsok=" />
+        <server name="BROWSER_NAME" value="chrome" />
+        <server name="CACHE_PATH" value="tests/.cache" />
+    </php>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./src/</directory>
+        </whitelist>
+    </filter>
+</phpunit>
