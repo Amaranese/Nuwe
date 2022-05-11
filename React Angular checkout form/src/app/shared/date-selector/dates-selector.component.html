@@ -1,0 +1,74 @@
+<ng-container [formGroup]="form">
+    <mat-form-field
+        class="w-100"
+        appearance="outline"
+        (click)="startPicker.open()"
+    >
+        <mat-label>Début du voyage</mat-label>
+        <mat-datepicker-toggle
+            matSuffix
+            [for]="startPicker"
+        ></mat-datepicker-toggle>
+        <input
+            matInput
+            [matDatepicker]="startPicker"
+            [formControl]="startDate"
+            [matDatepickerFilter]="fromDateFilter"
+            [errorStateMatcher]="errorMatcher"
+            readonly
+        />
+        <mat-datepicker #startPicker [touchUi]="isMobile"></mat-datepicker>
+    </mat-form-field>
+    <div>
+        <label class="d-block mb-50"
+            >Connaissez-vous la date de fin exacte ?</label
+        >
+        <mat-radio-group
+            class="d-flex mb-100"
+            aria-label="Select an option"
+            formControlName="isDuration"
+        >
+            <mat-radio-button [value]="0">Oui</mat-radio-button>
+            <mat-radio-button [value]="1" class="ml-100">Non</mat-radio-button>
+        </mat-radio-group>
+    </div>
+    <mat-form-field
+        class="w-100"
+        appearance="outline"
+        *ngIf="isDuration.value === 0"
+    >
+        <mat-label>Fin du voyage</mat-label>
+        <mat-datepicker-toggle
+            matSuffix
+            [for]="endPicker"
+        ></mat-datepicker-toggle>
+        <input
+            matInput
+            [matDatepicker]="endPicker"
+            [formControl]="endDate"
+            [errorStateMatcher]="errorMatcher"
+            [matDatepickerFilter]="toDateFilter"
+            readonly
+            (click)="endPicker.open()"
+        />
+        <mat-datepicker #endPicker [touchUi]="isMobile"></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field
+        class="w-100"
+        appearance="outline"
+        *ngIf="isDuration.value === 1"
+    >
+        <mat-label>Nombre de jours</mat-label>
+        <input
+            matInput
+            [formControl]="duration"
+            type="number"
+            name="duration"
+            min="1"
+        />
+        <mat-error *ngIf="duration.hasError('required')"
+            >Duration is <strong>required</strong></mat-error
+        >
+        <mat-error *ngIf="duration.hasError('min')">Durée incorrecte</mat-error>
+    </mat-form-field>
+</ng-container>

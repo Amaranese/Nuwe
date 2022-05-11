@@ -1,0 +1,81 @@
+<div [formGroup]="form" class="pt-150">
+    <div fxLayout="row wrap" class="form-row">
+        <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+            <app-multi-checkboxes
+                formControlName="destinations"
+                appDestinations
+                #d="destinations"
+            >
+                <label class="app-label">Destinations</label>
+                <mat-checkbox
+                    *ngFor="let destination of d.items"
+                    appCheckboxItem
+                    class="d-block mb-50"
+                    [value]="destination.value"
+                    >{{ destination.label }}</mat-checkbox
+                >
+            </app-multi-checkboxes>
+        </div>
+        <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+            <app-multi-checkboxes
+                formControlName="safariExperiments"
+                appSafariExperiments
+                #se="safariExperiments"
+            >
+                <label class="app-label"
+                    >Quelle expérience de safari recherchez-vous ?
+                    <span class="app-optional">(optionnel)</span></label
+                >
+                <mat-checkbox
+                    *ngFor="let option of se.items"
+                    appCheckboxItem
+                    class="d-block mb-50"
+                    [value]="option.value"
+                    >{{ option.label }}</mat-checkbox
+                >
+            </app-multi-checkboxes>
+        </div>
+    </div>
+    <div fxLayout="row wrap" class="form-row">
+        <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+            <label class="app-label">Type de tour</label>
+            <mat-radio-group
+                aria-label="Type de tour"
+                formControlName="tourType"
+                appTourTypes
+                #tt="tourTypes"
+            >
+                <mat-radio-button
+                    *ngFor="let type of tt.items"
+                    [value]="type.value"
+                    class="d-block mb-50"
+                    >{{ type.label }}</mat-radio-button
+                >
+            </mat-radio-group>
+        </div>
+        <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+            <app-multi-checkboxes
+                appAttendants
+                #at="attendants"
+                formControlName="attendants"
+            >
+                <label class="app-label">Accompagnateurs</label>
+                <mat-checkbox
+                    *ngFor="let attendant of at.items"
+                    appCheckboxItem
+                    class="d-block mb-50"
+                    [value]="attendant.value"
+                    >{{ attendant.label }}</mat-checkbox
+                >
+            </app-multi-checkboxes>
+        </div>
+    </div>
+    <div fxLayout="row wrap" class="form-row">
+        <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+            <app-dates-selector
+                [isMobile]="isMobile"
+                [form]="form"
+            ></app-dates-selector>
+        </div>
+    </div>
+</div>

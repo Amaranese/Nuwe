@@ -1,0 +1,210 @@
+<div class="container" [formGroup]="form">
+    <mat-card>
+        <mat-card-title
+            >Url builder<span class="app-optional ml-50"
+                >V1.0</span
+            ></mat-card-title
+        >
+        <textarea class="w-100">{{ url$ | async }}</textarea>
+        <div class="my-50 d-flex justify-content-end">
+            <button
+                mat-raised-button
+                color="primary"
+                [cdkCopyToClipboard]="url$ | async"
+            >
+                Copy url
+            </button>
+            <button
+                mat-raised-button
+                color="warn"
+                class="ml-50"
+                (click)="form.reset()"
+            >
+                Reset all form
+            </button>
+        </div>
+        <div fxLayout="row wrap" class="form-row mt-250" formGroupName="tour">
+            <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+                <app-multi-checkboxes
+                    formControlName="destinations"
+                    appDestinations
+                    #d="destinations"
+                >
+                    <label class="app-label">Destinations</label>
+                    <mat-checkbox
+                        *ngFor="let destination of d.items"
+                        appCheckboxItem
+                        class="d-block mb-50"
+                        [value]="destination.value"
+                        >{{ destination.label }}</mat-checkbox
+                    >
+                </app-multi-checkboxes>
+            </div>
+            <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+                <app-multi-checkboxes
+                    formControlName="safariExperiments"
+                    appSafariExperiments
+                    #se="safariExperiments"
+                >
+                    <label class="app-label"
+                        >Quelle expérience de safari recherchez-vous ?</label
+                    >
+                    <mat-checkbox
+                        *ngFor="let option of se.items"
+                        appCheckboxItem
+                        class="d-block mb-50"
+                        [value]="option.value"
+                        >{{ option.label }}</mat-checkbox
+                    >
+                </app-multi-checkboxes>
+            </div>
+        </div>
+        <div fxLayout="row wrap" class="form-row" formGroupName="tour">
+            <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+                <label class="app-label"
+                    >Type de tour<button
+                        class="ml-100"
+                        mat-raised-button
+                        (click)="form.get('tour.tourType').reset(null)"
+                    >
+                        reset
+                    </button></label
+                >
+                <mat-radio-group
+                    aria-label="Type de tour"
+                    formControlName="tourType"
+                    appTourTypes
+                    #tt="tourTypes"
+                >
+                    <mat-radio-button
+                        *ngFor="let type of tt.items"
+                        [value]="type.value"
+                        class="d-block mb-50"
+                        >{{ type.label }}</mat-radio-button
+                    >
+                </mat-radio-group>
+            </div>
+            <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+                <app-multi-checkboxes
+                    appAttendants
+                    #at="attendants"
+                    formControlName="attendants"
+                >
+                    <label class="app-label">Accompagnateurs</label>
+                    <mat-checkbox
+                        *ngFor="let attendant of at.items"
+                        appCheckboxItem
+                        class="d-block mb-50"
+                        [value]="attendant.value"
+                        >{{ attendant.label }}</mat-checkbox
+                    >
+                </app-multi-checkboxes>
+            </div>
+        </div>
+        <div fxLayout="row wrap" class="form-row">
+            <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+                <label class="app-label"
+                    >Dates et durée<button
+                        class="ml-100"
+                        mat-raised-button
+                        (click)="resetDates()"
+                    >
+                        reset
+                    </button></label
+                >
+                <app-dates-selector
+                    [isMobile]="false"
+                    [form]="tourForm"
+                ></app-dates-selector>
+            </div>
+            <div
+                class="form-cell"
+                fxFlex="100"
+                fxFlex.gt-xs="50"
+                formGroupName="preferences"
+            >
+                <label class="app-label"
+                    >Type d'hébergement souhaité<button
+                        class="ml-100"
+                        mat-raised-button
+                        (click)="
+                            form.get('preferences.hostingType').reset(null)
+                        "
+                    >
+                        reset
+                    </button></label
+                >
+                <mat-radio-group
+                    aria-label="Type d'hébergement souhaité"
+                    formControlName="hostingType"
+                    appHostingTypes
+                    #ht="hostingTypes"
+                >
+                    <mat-radio-button
+                        *ngFor="let option of ht.items"
+                        [value]="option.value"
+                        class="d-block mb-50"
+                        >{{ option.label }}</mat-radio-button
+                    >
+                </mat-radio-group>
+            </div>
+        </div>
+        <div fxLayout="row wrap" class="form-row" formGroupName="preferences">
+            <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+                <label class="app-label"
+                    >Type de véhicule de safari<button
+                        class="ml-100"
+                        mat-raised-button
+                        (click)="
+                            form.get('preferences.vehicleType').reset(null)
+                        "
+                    >
+                        reset
+                    </button></label
+                >
+                <mat-radio-group
+                    aria-label="Type d'hébergement souhaité"
+                    formControlName="vehicleType"
+                    appVehicleTypes
+                    #vt="vehicleTypes"
+                >
+                    <mat-radio-button
+                        *ngFor="
+                            let option of vt.items
+                                | vehicleTypesFilter
+                                    : form.get('preferences.hostingType').value
+                        "
+                        [value]="option.value"
+                        class="d-block mb-50"
+                        [disabled]="option.disabled"
+                        >{{ option.label }}</mat-radio-button
+                    >
+                </mat-radio-group>
+            </div>
+            <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+                <label class="app-label"
+                    >Repas<button
+                        class="ml-100"
+                        mat-raised-button
+                        (click)="form.get('mealType').reset(null)"
+                    >
+                        reset
+                    </button></label
+                >
+                <mat-radio-group
+                    aria-label="Repas"
+                    formControlName="mealType"
+                    appMealTypes
+                    #mt="mealTypes"
+                >
+                    <mat-radio-button
+                        *ngFor="let option of mt.items"
+                        [value]="option.value"
+                        class="d-block mb-50"
+                        >{{ option.label }}</mat-radio-button
+                    >
+                </mat-radio-group>
+            </div>
+        </div>
+    </mat-card>
+</div>

@@ -1,0 +1,14 @@
+.app-detail-row {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+
+    ul {
+        list-style-position: inside;
+    }
+}
+
+.app-detail-row__label {
+    font-weight: 500;
+    padding-right: 0.75rem;
+}

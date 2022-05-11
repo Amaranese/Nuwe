@@ -1,0 +1,10 @@
+- Votre voyage
+ > Destinations > Quelle expérience
+ > Type de tour > Accompagnateur
+ > Dates > Budget (oui/non -> encoder)
+- Information de contact
+- Repas & Hébergement
+ > Type d'hebergement
+ > repas
+ > type de vehicle
+ > free text

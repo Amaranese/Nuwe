@@ -1,0 +1,118 @@
+{
+    "data":{
+        "destinations":[
+            { 
+                "value": "south-namibia",
+                "label": "Sud Namibie"
+            },
+            { 
+                "value": "central-northwestern-namibia",
+                "label": "Centre et Nord-Ouest Namibie"
+            },
+            { 
+                "value": "northeast-namibia",
+                "label": "Nord-Est Namibie"
+            },
+            { 
+                "value": "botswana",
+                "label": "Botswana"
+            },
+            { 
+                "value": "zimbabwe",
+                "label": "Zimbabwe"
+            }
+        ],
+        "types":[
+            { 
+                "value": "self-drive",
+                "label": "Autotour"
+            },
+            { 
+                "value": "group",
+                "label": "Tour en groupe"
+            },
+            { 
+                "value": "guided-tour",
+                "label": "Tour guidé"
+            }
+        ],
+        "attendants" :[
+            { 
+                "value": "guide",
+                "label": "Guide"
+            },
+            { 
+                "value": "driver",
+                "label": "Chauffeur"
+            },
+            { 
+                "value": "aide-de-camp",
+                "label": "Aide de camp"
+            }
+        ],
+        "safariExperiments" :[
+            {
+                "value": "animal-observation",
+                "label": "Observation animalière"
+            },
+            {
+                "value": "specific-activities",
+                "label": "Activités spécifiques"
+            },
+            {
+                "value": "meet-people",
+                "label": "Rencontre des peuples et des cultures"
+            },
+            {
+                "value": "unusual-places",
+                "label": "Lieux et paysages insolites"
+            }
+        ],
+        "hostingTypes": [
+            {
+                "value": "camping",
+                "label": "Camping"
+            },
+            {
+                "value": "camping-guesthouse-lodge",
+                "label": "Combinaison Camping, Guesthouse et Lodge"
+            },
+            {
+                "value": "guesthouse-lodge",
+                "label": "Guesthouse et Lodge"
+            },
+            {
+                "value": "luxury-lodge",
+                "label": "Lodge de luxe"
+            }
+        ],
+        "meals": [
+            {
+                "value": "breakfast",
+                "label": "Petit déjeuner"
+            },
+            {
+                "value": "demi-pension",
+                "label": "Petit-déjeuner et diner (demi-pension)"
+            },
+            {
+                "value": "full-pension",
+                "label": "Petit-déjeuner, lunch et diner (pension complète)"
+            }
+        ],
+        "vehicles": [
+            {
+                "value": "4x4-no-camping-equipment",
+                "label": "4x4 non équipé camping"
+            },
+            {
+                "value": "4x4-camping-equipment",
+                "label": "4x4 équipé camping"
+            },
+            {
+                "value": "suv",
+                "label": "SUV"
+            }
+        ]
+    }
+}

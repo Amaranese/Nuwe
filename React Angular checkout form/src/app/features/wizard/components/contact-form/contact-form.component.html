@@ -1,0 +1,86 @@
+<div [formGroup]="form" class="pt-150">
+    <div fxLayout="row wrap" class="form-row">
+        <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+            <mat-form-field class="w-100" appearance="outline">
+                <mat-label appRequired>First name</mat-label>
+                <input matInput [formControl]="firstName" name="firstname"/>
+                <mat-error *ngIf="firstName.hasError('required')">First name is <strong>required</strong></mat-error>
+            </mat-form-field>
+        </div>
+        <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+            <mat-form-field class="w-100" appearance="outline">
+                <mat-label appRequired>Last name</mat-label>
+                <input matInput [formControl]="lastName" name="lastName"/>
+                <mat-error *ngIf="lastName.hasError('required')">Last name is <strong>required</strong></mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row wrap" class="form-row">
+        <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+            <label>Titre :</label>
+            <mat-radio-group class="app-inline-radio" aria-label="Select an option" formControlName="title">
+                <mat-radio-button value="ms" class="ml-100">Ms.</mat-radio-button>
+                <mat-radio-button value="mr" class="ml-100">Mr.</mat-radio-button>
+            </mat-radio-group>
+        </div>
+    </div>
+    <div fxLayout="row wrap" class="form-row">
+        <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+            <mat-form-field class="w-100" appearance="outline">
+                <mat-label appRequired>Mail address</mat-label>
+                <input matInput [formControl]="email" name="email"/>
+                <mat-error *ngIf="email.hasError('required')">Email is <strong>required</strong></mat-error>
+                <mat-error *ngIf="email.hasError('email')">Email should be <strong>valid</strong></mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row wrap" class="form-row">
+        <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+            <mat-form-field class="w-100" appearance="outline">
+                <mat-label appRequired>Mobile phone number</mat-label>
+                <span matPrefix>+ &nbsp;</span>
+                <input matInput [formControl]="mobile" name="mobile"/>
+                <mat-hint><strong>Whatsapp</strong> or <strong>Skype</strong> will be used by tour operator</mat-hint>
+                <mat-error *ngIf="mobile.hasError('required')">Mobile phone number is <strong>required</strong></mat-error>
+            </mat-form-field>
+        </div>
+        <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+            <mat-form-field class="w-100" appearance="outline">
+                <mat-label appRequired>Country</mat-label>
+                <mat-select [formControl]="country">
+                    <mat-option *ngFor="let option of countries" [value]="option.value">
+                        {{option.label}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="country.hasError('required')">Country is <strong>required</strong></mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row wrap" class="form-row">
+        <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+            <mat-form-field class="w-100" appearance="outline">
+                <mat-label appRequired>Adults number</mat-label>
+                <mat-select [formControl]="adultNumber">
+                    <mat-option *ngFor="let option of adultNumberOptions" [value]="option">{{ option }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+            <mat-form-field class="w-100"appearance="outline">
+                <mat-label appRequired>Children number</mat-label>
+                <mat-select [formControl]="childrenNumber">
+                    <mat-option *ngFor="let option of childrenNumberOptions" [value]="option">{{ option }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row wrap" class="form-row">
+        <div class="form-cell" fxFlex="100" fxFlex.gt-xs="50">
+            <label>Children less than 4 years :</label>
+            <mat-radio-group class="app-inline-radio" aria-label="Select an option" [formControl]="has4YearsKids">
+                <mat-radio-button [value]="true" class="ml-100">Yes</mat-radio-button>
+                <mat-radio-button [value]="false" class="ml-100">No</mat-radio-button>
+            </mat-radio-group>
+        </div>
+    </div>
+</div>
