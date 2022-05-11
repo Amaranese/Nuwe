@@ -1,0 +1,169 @@
+.section__card {
+    height: 457px;
+    background: linear-gradient(to bottom, #bfcdd0, #dde9ed);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media all and (min-width: 768px) {
+        border-radius: 6px;
+        height: 100vh;
+    }
+}
+
+.card__reset {
+    width: 75px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 15px;
+    color: $grey-dark;
+    padding: 0;
+    text-transform: uppercase;
+    font-family: $fontOpenSans;
+    font-weight: $open-sans-reg;
+    font-size: 12px;
+    line-height: 20px;
+    position: absolute;
+    top: -50px;
+    cursor: pointer;
+}
+
+.fa-trash-alt {
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+.card__box {
+    width: 240px;
+    min-height: 331px;
+    background-color: $white;
+    border-radius: 2px; 
+    margin-top: 50px;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+    position: relative;
+}
+
+.card__box--header {
+  padding: 21px 14px 10px 0;
+}
+
+.card__box--text {
+  border-left: solid 5px $green;
+  padding-left: 15px;
+}
+
+.card__name {
+    font-family: $fontMontse;
+    font-weight: $montse-bold;
+    font-size: 18px;
+    line-height: 20px;
+    color: $dark-green;
+    margin: 0;
+    padding-bottom: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card__job-title {
+    font-family: $fontMontse;
+    font-weight: $montse-reg;
+    font-size: 16px;
+    line-height: 20px;
+    color: $grey-dark;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card__photo {
+    width: 100%;
+    height: 200px;
+    display: block;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1M8A6NkzDknLi9qdwF89W_Nhgd2Ru9D5s7REKbxWgpUo4TtL7');
+    background-size: cover;
+    background-position: center;
+}
+
+.card__photo--test {
+  width: 100%;
+  height: 200px;
+  display: block;
+  background-image: url('https://placehold.it/240x200');
+  background-size: cover;
+}
+
+.card__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0 12px 15px; 
+}
+
+.card__list--link {
+    text-decoration: none;
+    border: 2px solid $green;
+    width: 32px;
+    height: 0;
+    line-height: 30px;
+    color: $dark-green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.hide__card__list--link {
+    display: none;
+}
+
+.fa-mobile-alt {
+    font-size: 18px;
+}
+
+
+.option1 {
+  .card__box--text {
+    border-left: 5px solid $green;
+  }
+  .card__name {
+    color: $dark-green;
+  }
+  .card__list--link {
+    color: $dark-green;
+    border: 2px solid $green;
+  }
+}
+
+.option2 {
+  .card__box--text {
+    border-left: 5px solid #e95626;
+  }
+  .card__name {
+    color: #420101;
+  }
+  .card__list--link {
+    color: #420101;
+    border: 2px solid #e95626;
+  }
+}
+
+.option3 {
+  .card__box--text {
+    border-left: 5px solid #a0c0cf;
+  }
+  .card__name {
+    color: #3e5b65;
+  }
+  .card__list--link {
+    color: #3e5b65;
+    border: 2px solid #a0c0cf;
+  }
+}

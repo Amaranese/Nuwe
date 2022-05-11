@@ -1,0 +1,41 @@
+{
+  "icons": {
+    "src": "_src/assets/icons/*.*",
+    "dest": "public/",
+    "dist": "docs/"
+  },
+  "html": {
+    "src": "_src/templates/*.html",
+    "partials": "_src/templates/partials/",
+    "dest": "public/",
+    "dist": "docs/"
+  },
+	"scss": {
+		"src": "_src/assets/scss/**/*.scss",
+		"dest": "public/assets/css/",
+    "dist": "docs/assets/css/"
+	},
+	"js": {
+		"src": [
+      "_src/assets/js/main.js",
+      "_src/assets/js/form-card.js",
+      "_src/assets/js/icons.js",
+      "_src/assets/js/color-palette.js",
+      "_src/assets/js/collapsible-form-card.js",
+      "_src/assets/js/reset-button.js",
+      "_src/assets/js/preview-image.js",
+      "_src/assets/js/api.js",
+      "_src/assets/js/twitter-btn.js"
+		],
+		"dest": "public/assets/js/",
+    "dist": "docs/assets/js/"
+	},
+	"images": {
+    "src": "_src/assets/images/**/*.{gif,jpg,jpeg,JPG,JPEG,png,svg}",
+    "dest": "public/assets/images/",
+    "dist": "docs/assets/images/"
+  },
+  "watch": {
+   "html": "_src/**/*.html"
+  }
+}

@@ -1,0 +1,15 @@
+@mixin titleForm() {
+    font-family: $fontOpenSans;
+    color: $grey-dark;
+    font-size: 18px;
+    text-transform: uppercase;
+    flex-grow: 1;
+    margin: 0;
+    font-weight: $open-sans-semibold;
+}
+
+@mixin iconForm() {
+    color: $orange;
+    font-size: 18px;
+    margin: 0 10px 0 0;
+}

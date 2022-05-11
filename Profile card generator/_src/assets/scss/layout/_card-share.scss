@@ -1,0 +1,61 @@
+.share__design {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.share__title {
+  display: flex;
+  padding-bottom: 30px;
+  text-decoration: none;
+}
+
+.share__title--img {
+  @include iconForm;
+}
+
+.share__title--name {
+  @include titleForm;
+}
+
+.arrow {
+  font-size: 18px;
+  color: $grey-dark;
+}
+
+
+.share__created {
+  border-top: solid 1px $medium-grey;
+  border-bottom: solid 1px $medium-grey;
+  padding: 20px 0 30px;
+}
+
+.share__created--text {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: $grey-dark;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.share__created--link{
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  color: $orange;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.share__button {
+  cursor: pointer;
+}
+
+.share__hidden {
+  display: none;
+}
