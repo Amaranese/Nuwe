@@ -1,0 +1,27 @@
+[
+    {
+        "avatar":"https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1480&q=80",
+        "name": "Dio Brando",
+        "index":0,
+        "comment":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem debitis reprehenderit tempore blanditiis possimus, aliquam adipisci hic unde assumenda. Tempora dolorum sint iure dicta cumque quo possimus a magnam possimus a magnam cupiditate.Quidem debitis reprehenderit tempore blanditiis possimus."
+    },
+    {
+        "avatar": "https://images.unsplash.com/photo-1621883626220-5320c3004e20?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1480&q=80",
+        "name":"Jolin Kujo",
+        "index":1,
+        "comment":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem debitis reprehenderit tempore blanditiis possimus, aliquam adipisci hic unde assumenda. Tempora dolorum sint iure dicta cumque quo ipsum quo possimus a magnam cupiditate.Cumque quo possimus a magnam debitim lorem aga quo lor cupiditate.Laliquam adipisci possimus a magnam quo nulo hic unde assumenda."
+    },
+    {
+        "avatar": "https://images.unsplash.com/photo-1604246310419-a32e1452a6ce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1429&q=80",
+        "name":"Giorno Giovanna",
+        "index":2,
+        "comment":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem debitis reprehenderit tempore blanditiis possimus, aliquam adipisci hic unde assumenda. Tempora dolorum sint iure quo possimus dicta cumque quo possimus a magnam cupiditate.Laliquam adipisci possimus a magnam quo nulo hic unde assumenda. Tempora dolorum sint iure dicta cumque quo possimus a magnam cupiditate."
+    },
+    {
+        "avatar": "https://images.unsplash.com/photo-1634316887741-93ff860c6854?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1480&q=80",
+        "name":"Holy Jostar",
+        "index":3,
+        "comment":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laliquam adipisci hic unde assumenda. Tempora dolorum sint iure dicta cumque quo possimus a magnam cupiditate.  Quidem debitis reprehenderit tempore blanditiis possimus, aliquam adipisci hic unde assumenda. Tempora dolorum sint iure dicta cumque quo possimus a magnam cupiditate."
+    }
+]
+
