@@ -1,0 +1,99 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #edf2f4;
+}
+
+#quote-box {
+  padding: 2rem;
+  display: flex;
+  flex-direction:column;
+  height: 400px;
+  width: 700px;
+  background-color: #3d5a80;
+  border-radius: 5px;
+  font-family: 'Cutive Mono', monospace;   
+  color: white;
+  justify-content: center;
+  
+  
+}
+
+
+#text {
+
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    font-size: 25px;
+    overflow: scroll;
+
+    
+    
+    
+}
+#text::-webkit-scrollbar {
+    display: none;
+   
+ 
+}
+
+
+#author {
+    padding-top: 3rem;
+    height: 15%;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.bottom-section {
+    display: flex;
+    height: 25%;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 6px;
+
+}
+
+button {
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ee6c4d ;
+    color: white;
+    font-size: 18px;
+    padding: 10px 18px ;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in;
+    font-family: 'Cutive Mono', monospace;
+    
+}
+
+button:hover {
+    height: 55px;
+    color: #ee6c4d;
+    background-color: white;
+    transition: all 0.3s ease-in;
+}
+
+
+#tweet-quote svg {
+ height: 50px;
+ width: 50px;
+ fill:#edf2f4;
+ 
+}
+
+#tweet-quote svg:hover {
+    fill: #1da1f2;
+    transition: all 1s;
+    transform: rotate(360deg);
+}
