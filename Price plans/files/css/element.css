@@ -1,0 +1,122 @@
+/* element.css for the Price Chart element. 
+ * this takes a lot of stuff from the basic table's stylesheet, as it's used as a base for the Price Chart */
+
+.price-chart-wrapper {
+    padding: 20px 0;
+}
+
+.price-chart {
+    @border: 1px solid @borderColor;
+
+    width: 100%;
+    background-color: @backgroundColor;
+    border: @border;
+    border-spacing: 0;
+    
+
+    .cells();
+    .buttons();
+
+
+    /* styles for the cells inside the tables. 
+       handles styling the headlines (because those are rendered as regular <td>s, not <th>s) */
+    .cells() {
+        td.cell {
+            border-right: @border;
+            border-bottom: @border;
+            word-break: break-word;
+
+            /* .paragraphs are the actual editable content */
+            div.paragraph {
+                text-align: @alignment;
+                width: 90%;
+                margin: 0 5%;
+                padding-bottom: 10px;
+                padding-top: 10px;
+
+            }
+        }
+
+        /* defining the width */
+        & td.cell {
+            width: (100% * (1 / @plans));
+        }
+
+        /* heading styles */
+        & tr:first-child td {
+            background-color: @titleColor;
+
+            .paragraph {
+                font-weight: 700;
+            }
+        }
+
+        /* fenceposting the borders */
+        tr:last-of-type td {
+            border-bottom: none;
+        }
+
+        td:last-of-type {
+            border-right: none;
+        }
+
+        /* styling the pricing and rate cells, to make them look nice (and like they're part of the same cell) */
+        .price td {
+            border-bottom: 0;
+
+            div.paragraph {
+                font-weight: 700;
+                font-size: 300%;
+                padding: 0 auto;
+                color: @numberColor;
+
+                /* if the user has defined a specific price prefix/currency, that gets applied here 
+                 * if they haven't defined one, then the before doesn't exist, because that messes up
+                 * caret positioning for an empty paragraph */
+                .prefix() when not (@currency = "") {
+                    &:not(:empty)::before {
+                        content: @currency;
+                        font-size: 50%;
+                        vertical-align: super;
+                    }
+                }
+
+                .prefix();
+            }
+        }
+
+        .rate td div.paragraph {
+            padding-top: 0;
+            margin-top: -10px;
+        }
+    }
+
+    /* handles styling of the bottoms, and hiding the ones that shouldn't be shown */
+    .buttons() {
+        .buttons-bottom, .buttons-middle {
+            .element, .cell > div {
+                text-align: @alignment;
+            }
+        }
+
+        &.buttonLocation-Bottom {
+            .buttons-middle {
+                display: none;
+            }
+        }
+
+        &.buttonLocation-Top {
+            /* since the buttons on the bottom have a row, our usual fenceposting for borders won't work.
+               the hack is to say that the table itself doesn't have a border-bottom, so the cell's border
+               will make it look like it does */
+            .rate td, & {
+                border-bottom: none;
+            }
+
+            .buttons-bottom {
+                display: none;
+            }
+        }
+    }
+}
+

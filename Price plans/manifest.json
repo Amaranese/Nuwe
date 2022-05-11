@@ -1,0 +1,209 @@
+{
+  "manifest": "1",
+  "version": "1.2.6",
+  "elements": [
+    {
+      "name": "Price Chart",
+      "path": "files",
+      "version": "1.2.6",
+      "settings": {
+        "config": {
+          "autopop": false
+        },
+        "properties": [
+          {
+            "name": "settings",
+            "label": "Settings",
+            "type": "group",
+            "properties": [
+              {
+                "name": "plans",
+                "label": "Plans",
+                "type": "int",
+                "default": 3,
+                "step": 1,
+                "min": 1,
+                "tooltip": "Select the number of plans to display"
+              },
+              {
+                "name": "features",
+                "label": "Features",
+                "type": "int",
+                "default": 3,
+                "step": 1,
+                "min": 1,
+                "tooltip": "Select the number of features for each plan"
+              },
+              {
+                "name": "location",
+                "label": "Sign Up Button",
+                "type": "select",
+                "values": [
+                  "Top",
+                  "Bottom"
+                ],
+                "default": "Top"
+              },
+              {
+                "name": "alignment",
+                "label": "Align",
+                "type": "align",
+                "default": "center"
+              }
+            ]
+          },
+          {
+            "name": "advanced",
+            "label": "Advanced",
+            "type": "group",
+            "properties": [
+              {
+                "name": "currency",
+                "label": "Currency",
+                "type": "select",
+                "values": [
+                  {
+                    "name": "USD ($)",
+                    "value": "'$'"
+                  },
+                  {
+                    "name": "EUR (€)",
+                    "value": "'€'"
+                  },
+                  {
+                    "name": "GBP (£)",
+                    "value": "'£'"
+                  },
+                  {
+                    "name": "JPY (¥)",
+                    "value": "'¥'"
+                  },
+                  {
+                    "name": "AUD (A$)",
+                    "value": "'A$'"
+                  },
+                  {
+                    "name": "CAD (C$)",
+                    "value": "'C$'"
+                  },
+                  {
+                    "name": "NZD ($)",
+                    "value": "' $'"
+                  },
+                  {
+                    "name": "CHF (CHF)",
+                    "value": "'CHF'"
+                  },
+                  {
+                    "name": "HKD ($)",
+                    "value": "'  $'"
+                  },
+                  {
+                    "name": "SGD ($)",
+                    "value": "'   $'"
+                  },
+                  {
+                    "name": "SEK (kr)",
+                    "value": "'kr'"
+                  },
+                  {
+                    "name": "DKK (kr)",
+                    "value": "' kr'"
+                  },
+                  {
+                    "name": "NOK (kr)",
+                    "value": "'  kr'"
+                  },
+                  {
+                    "name": "PLN (zŁ",
+                    "value": "'zŁ'"
+                  },
+                  {
+                    "name": "HUF (Ft)",
+                    "value": "'Ft'"
+                  },
+                  {
+                    "name": "CZK (KČ)",
+                    "value": "'KČ'"
+                  },
+                  {
+                    "name": "ILS (₪)",
+                    "value": "'₪'"
+                  },
+                  {
+                    "name": "MXN (Mex$)",
+                    "value": "'Mex$'"
+                  },
+                  {
+                    "name": "MYR (MYR)",
+                    "value": "'MYR'"
+                  },
+                  {
+                    "name": "BRL (R$)",
+                    "value": "'R$'"
+                  },
+                  {
+                    "name": "PHP (₱)",
+                    "value": "'₱'"
+                  },
+                  {
+                    "name": "RUB (₽)",
+                    "value": "'₽'"
+                  },
+                  {
+                    "name": "THB (฿)",
+                    "value": "'฿'"
+                  },
+                  {
+                    "name": "TRY (TL)",
+                    "value": "'TL'"
+                  },
+                  {
+                    "name": "TWD (NT$)",
+                    "value": "'NT$'"
+                  }
+                ],
+                "default": "'$'"
+              },
+              {
+                "name": "titleColor",
+                "label": "Title Background",
+                "type": "color",
+                "default": "#F8F8F8"
+              },
+              {
+                "name": "backgroundColor",
+                "label": "Content Background",
+                "type": "color",
+                "default": "#FFFFFF"
+              },
+              {
+                "name": "numberColor",
+                "label": "Number",
+                "type": "color",
+                "default": "#222222"
+              },
+              {
+                "name": "borderColor",
+                "label": "Border Color",
+                "type": "color",
+                "default": "#C9CDCF"
+              }
+            ]
+          }
+        ]
+      },
+      "tutorial": {
+        "introduction": "The Price Chart app presents product or subscription details in an attractive, easy to read format.",
+        "type": "steps",
+        "content": [
+          "Choose the number of plans and features for each plan. These settings control how many plans are displayed side by side, and the number of features entered will apply to all plans in the app.",
+          "Select which currency you want to use. You can choose from among 25 different currencies to display your prices in, and this setting also applies to all plans within the app.",
+          "Configure the alignment, title and background colors, and button position. You can add links and adjust the spacing, text, and style for each button by clicking on it.",
+          "Customize the details for each plan. Click on the default text to select and modify it. You can change the colors using the text editing toolbar."
+        ],
+        "autopop": true
+      }
+    }
+  ]
+}
