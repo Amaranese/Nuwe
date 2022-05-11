@@ -1,0 +1,159 @@
+/*Common CSS*/
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+a:hover, a:focus {
+    text-decoration: none;
+}
+a:focus, input:focus, textarea:focus, button:focus {
+    outline: 0 solid;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;   /* top:0, left-right:0; bottom:15px; */
+    font-weight: 700;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+h2 {
+    font-size: 32px; 
+}
+h3 {
+    font-size: 20px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #565656;
+    font-size: 15px;
+    background: #eee;
+}
+
+
+.contact-colored-box {
+    background: #4daefe;
+    color: #fff;
+    margin-left: 25px;
+    padding: 30px;
+    min-height: 495px;
+}
+
+section.footer-area {
+    margin-top: 100px;
+    padding: 50px 0;
+    background: #4daefe;
+    color: #fff;
+}
+
+
+
+
+.footer-area a {
+    color: #fff;
+}
+.footer-widget h3 {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.footer-widget ul {
+    list-style: outside none none;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+}
+.footer-widget li {
+    line-height: 22px;
+}
+.contact-info {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+}
+.contact-info i.fa {
+    left: 0;
+    position: absolute;
+    top: 4px;
+}
+.footer-widget h4 {
+    font-size: 16px;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+.footer-widget input[type="email"] {
+    background: #fff none repeat scroll 0 0;
+    border: medium none;
+    color: #333;
+    padding: 10px;
+    width: 73%;
+}
+.footer-widget input[type="submit"] {
+    background: #fff none repeat scroll 0 0;
+    border: medium none;
+    color: #4daefe;
+    font-weight: 700;
+    padding: 10px;
+    text-transform: uppercase;
+    width: 25%;
+}
+.footer-widget form p {
+    font-size: 90%;
+    margin-top: 7px;
+}
+
+
+.footer-social i.fa {
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 20px;
+    padding-right: 12px;
+}
+
+.copyright-area {
+    padding: 20px 0;
+    background: #fff;
+}
+.copyright-area, .copyright-area a {
+    color: #999;
+    
+}
+.copyright-area ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.copyright-area li {
+    display: inline-block;
+}
+.copyright-area li a {
+}
+.copyright-area li::after {
+    content: "|";
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.copyright-area li:last-child::after {
+    display: none;
+}
+
+
+
+
+
+
