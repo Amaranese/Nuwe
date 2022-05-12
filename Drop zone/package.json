@@ -78,20 +78,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-dropzone/react-dropzone.git"
+    "url": ""
   },
   "bugs": {
-    "url": "https://github.com/react-dropzone/react-dropzone/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/react-dropzone/react-dropzone",
-  "author": "Param Aggarwal",
+  "homepage": "",
+  "author": "",
   "contributors": [
-    "Andrey Okonetchnikov <andrey@okonet.ru> (http://okonet.ru)",
-    "Mike Olson <me@mwolson.org>",
-    "Param Aggarwal",
-    "Tyler Waters <tyler.waters@gmail.com>",
-    "Rick Markins <rmarkins@gmail.com>",
-    "Roland Groza <rolandjitsu@gmail.com>"
   ],
   "license": "MIT",
   "peerDependencies": {
