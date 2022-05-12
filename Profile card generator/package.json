@@ -1,7 +1,7 @@
 {
-	"name": "AdalabWebStarterKit",
+	"name": "",
 	"version": "2.0.2",
-	"description": "Adalab web starter kit",
+	"description": "",
 	"dependencies": {
 		"browser-sync": "^2.26.3",
 		"del": "^3.0.0",
@@ -27,9 +27,9 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@github.com:Adalab/Adalab-web-starter-kit.git"
+		"url": ""
 	},
-	"author": "Adalab",
+	"author": "",
 	"license": "MIT",
-	"homepage": "https://github.com/Adalab/Adalab-web-starter-kit"
+	"homepage": ""
 }
