@@ -1,0 +1,6 @@
+github.com/vishalkprabhu/crypto-finder/client v0.0.0-20210509065915-d6e44f56e19a h1:dvK8SU1X9lmL/YTT1jeXgaJhh7h3nMfQM8EdNUxNiWk=
+github.com/vishalkprabhu/crypto-finder/client v0.0.0-20210509065915-d6e44f56e19a/go.mod h1:AAVLF1H6WJjMqNEpbgAQGoPVNOtCQepr4zsdr98Fe9U=
+github.com/vishalkprabhu/crypto-finder/model v0.0.0-20210509065915-d6e44f56e19a h1:XgYUjzxgqa3kH8Ij2LfqsyfuCeKaiTVvpz2lseXBAxo=
+github.com/vishalkprabhu/crypto-finder/model v0.0.0-20210509065915-d6e44f56e19a/go.mod h1:ZrRpdrUBlwPRGOPPfrDdpPG1Y1PL8pdBkJ5yVbuXjRs=
+github.com/vishalkprabhu/crypto-finder/model v0.0.0-20210509070400-32cfde6cd2c0 h1:2m9JAsmcWrpOG8BxOplD8l9ab4mnVK2sf1thIZhR0JQ=
+github.com/vishalkprabhu/crypto-finder/model v0.0.0-20210509070400-32cfde6cd2c0/go.mod h1:ZrRpdrUBlwPRGOPPfrDdpPG1Y1PL8pdBkJ5yVbuXjRs=
