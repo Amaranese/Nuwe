@@ -1,0 +1,11 @@
+*.pyc
+__pycache__
+*.egg-info
+docs/_build/
+dist/
+.coverage
+.python-version
+.tox/
+*.sh
+build/
+.mypy_cache
